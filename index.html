@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Student System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+<main class="login-layout">
+  <section class="welcome">
+    <div class="logo">SS</div>
+    <p class="eyebrow">SMART STUDENT INFORMATION SYSTEM</p>
+    <h1>Learn better.<br><span>Grow together.</span></h1>
+    <p class="intro">
+      Manage student information, monitor grades, identify academic
+      risks, and provide learning support.
+    </p>
+
+    <div class="features">
+      <article class="feature">
+        <div>🎓</div>
+        <h3>Student Information</h3>
+        <p>Manage important student records in one place.</p>
+      </article>
+      <article class="feature">
+        <div>📊</div>
+        <h3>Grade Monitoring</h3>
+        <p>Monitor grades and academic performance.</p>
+      </article>
+      <article class="feature">
+        <div>⚠️</div>
+        <h3>Predictive Analytics</h3>
+        <p>Identify students who may need academic support.</p>
+      </article>
+      <article class="feature">
+        <div>🤝</div>
+        <h3>Resource Matching</h3>
+        <p>Provide study suggestions and recommendations.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="login-area">
+    <div class="login-card">
+      <div class="logo">SS</div>
+
+      <div id="loginPanel">
+        <h2>Welcome!</h2>
+        <p class="muted">Log in to your account.</p>
+
+        <form id="loginForm">
+          <label for="loginRole">Account Role</label>
+          <select id="loginRole" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="student">Student</option>
+            <option value="professor">Professor</option>
+            <option value="parent">Parent</option>
+            <option value="admin">Administrator</option>
+          </select>
+
+          <label for="loginUsername">Username</label>
+          <input id="loginUsername" required
+                 autocomplete="username" placeholder="Enter username">
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required
+                 autocomplete="current-password" placeholder="Enter password">
+
+          <button class="primary full" type="submit">Log In →</button>
+          <p id="loginMessage" class="message"></p>
+        </form>
+
+        <p class="muted">Need an account?
+          <button class="link-button" id="showRegister" type="button">
+            Register here
+          </button>
+        </p>
+      </div>
+
+      <div id="registerPanel" class="hidden">
+        <h2>Create Account</h2>
+        <p class="muted">Enter your own information.</p>
+
+        <form id="registerForm">
+          <label for="regRole">Account Role</label>
+          <select id="regRole" required>
+            <option value="" disabled selected>Select a role</option>
+            <option value="student">Student</option>
+            <option value="professor">Professor</option>
+            <option value="parent">Parent</option>
+            <option value="admin">Administrator</option>
+          </select>
+
+          <label for="regName">Full Name</label>
+          <input id="regName" required placeholder="Enter full name">
+
+          <label for="regUsername">Username</label>
+          <input id="regUsername" required placeholder="Create username">
+
+          <label for="regPassword">Password</label>
+          <input id="regPassword" type="password" required minlength="6"
+                 placeholder="At least 6 characters">
+
+          <div id="studentNumberBox" class="hidden">
+            <label for="regStudentNumber">Student Number</label>
+            <input id="regStudentNumber" placeholder="Enter unique student number">
+          </div>
+
+          <div id="parentNumberBox" class="hidden">
+            <label for="regChildNumber">Child's Student Number</label>
+            <input id="regChildNumber" placeholder="Enter child's student number">
+          </div>
+
+          <label for="regEmail">Email Address</label>
+          <input id="regEmail" type="email" required placeholder="Enter email">
+
+          <button class="primary full" type="submit">Create Account</button>
+          <p id="registerMessage" class="message"></p>
+        </form>
+
+        <button class="link-button" id="showLogin" type="button">
+          ← Back to Login
+        </button>
+      </div>
+
+      <p class="privacy-note">
+        🔒 Each student account is connected to a unique student number.
+      </p>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
